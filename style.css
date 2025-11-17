@@ -1,0 +1,401 @@
+/* الأنماط الأساسية */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط أكثر حداثة */
+    background-color: #f8f9fa; /* خلفية بيضاء ناعمة */
+    color: #343a40; /* لون نص داكن احترافي */
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
+    text-align: right;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px; 
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* 1. الشريط العلوي (Navbar) */
+.navbar {
+    background-color: #ffffff; 
+    border-bottom: 3px solid #007bff; 
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px; 
+    height: auto;
+    margin-right: 15px; 
+}
+
+.logo-text {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #007bff; 
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: 500;
+}
+
+.nav-links li a {
+    color: #495057; 
+    text-decoration: none;
+    padding: 10px 18px;
+    display: block;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #007bff; 
+    color: white;
+}
+
+/* 2. قسم الواجهة الرئيسية (Hero) */
+.hero-section {
+    background-color: #007bff; 
+    color: white;
+    padding: 80px 0; 
+    text-align: center;
+    box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.3);
+}
+
+.header-image {
+    max-width: 600px; 
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 15px; 
+    object-fit: cover; 
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em; 
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+    font-size: 1.6em;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.start-btn {
+    background-color: #28a745; 
+    color: white;
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.start-btn:hover {
+    background-color: #1e7e34; 
+    transform: translateY(-2px); 
+}
+/* نهاية أنماط Hero Section */
+
+
+/* العناوين والأقسام */
+.section-title {
+    text-align: center;
+    font-size: 2.8em;
+    color: #007bff; 
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+hr {
+    border: 0;
+    height: 2px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #007bff, rgba(0, 0, 0, 0));
+    margin-bottom: 40px;
+}
+
+/* بطاقات المفهوم والمشروع */
+.concept-card, .project-card {
+    background-color: white;
+    padding: 30px; 
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    border-right: 6px solid #ffc107; 
+}
+
+.concept-card h3, .project-card h3 {
+    color: #007bff;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+/* 3. مربع الكود وزر النسخ */
+.code-example {
+    position: relative;
+    margin-top: 20px;
+    direction: ltr; 
+    text-align: left;
+}
+
+.code-box pre {
+    background-color: #282c34; 
+    color: #f8f8f2;
+    padding: 20px;
+    padding-top: 50px;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace; 
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.keyword { 
+    color: #c678dd; 
+}
+
+.string { 
+    color: #98c379; 
+}
+
+.comment { 
+    color: #5c6370; 
+}
+
+.number, .boolean { 
+    color: #d19a66; 
+}
+
+.function-name { 
+    color: #61afef; 
+}
+
+.code-box::before {
+    content: "Example (Python):";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #a0a0a0;
+    font-size: 0.9em;
+    font-family: 'Segoe UI', sans-serif;
+    z-index: 6;
+}
+
+.copy-btn {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    left: auto; 
+    transition: background-color 0.3s;
+    z-index: 7;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+/* 4. تنسيق أسئلة الاختبار */
+.quiz-question {
+    margin-bottom: 25px;
+    direction: ltr; 
+    text-align: left;
+    padding-right: 10px; 
+}
+
+.quiz-question p {
+    font-weight: 600;
+    color: #007bff; 
+    direction: ltr; 
+    font-size: 1.1em;
+}
+
+.quiz-question pre {
+    background-color: #f8f9fa; 
+    border: 1px solid #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #007bff; 
+    overflow-x: auto; 
+    margin: 15px 0;
+    white-space: pre-wrap; 
+    direction: ltr; 
+}
+
+.quiz-question code {
+    font-family: 'Consolas', 'Courier New', monospace; 
+    font-size: 1em;
+    color: #343a40; 
+    display: block; 
+}
+
+.quiz-question label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 12px;
+    border: 1px solid #ced4da; 
+    border-radius: 5px;
+    transition: all 0.2s;
+    direction: ltr; 
+    text-align: left;
+    background-color: white;
+}
+
+.quiz-question label:hover {
+    background-color: #e9ecef; 
+    border-color: #007bff;
+}
+
+/* 5. قسم الاختبار وبقية العناصر */
+.quiz-section {
+    text-align: center;
+    background-color: #f8f9fa; 
+    border: 1px solid #ced4da;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.quiz-btn {
+    background-color: #007bff; 
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.quiz-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.quiz-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Footer - تم تحسين التصميم ليتناسب مع المظهر الاحترافي */
+footer {
+    background-color: #343a40; /* لون خلفية داكن (Dark Gray) */
+    color: #ced4da; /* لون نص رمادي فاتح لتباين مريح */
+    text-align: center;
+    padding: 30px 0; /* زيادة التباعد الرأسي لجعله أكثر بروزاً */
+    margin-top: 50px;
+    font-size: 0.9em;
+    border-top: 4px solid #007bff; /* شريط أزرق رفيع في الأعلى كفاصل جذاب */
+}
+
+footer p {
+    margin: 0; /* إزالة أي هوامش إضافية من الفقرة */
+    line-height: 1.5;
+}
+
+
+/* Media Query للشاشات الصغيرة */
+@media (max-width: 768px) {
+    
+    .header-image {
+        max-width: 80%; /* تقليل حجم الصورة الأقصى (كان 600px) إلى 80% من عرض الشاشة */
+        margin-bottom: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.3em;
+    }
+    
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    .logo-text {
+        font-size: 1.4em;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #007bff; 
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        text-align: right;
+        padding: 12px 20px;
+        border-top: 1px solid #0056b3;
+        color: white;
+    }
+    .nav-links li a:hover {
+        background-color: #0056b3;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .start-btn {
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+}

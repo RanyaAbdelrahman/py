@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بايثون للصغار المبدعين  </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* الأيقونة الحمراء للمفاهيم (لتنسيق الشكل) */
+        .concept-card h3::before {
+            content: "🔴"; 
+            margin-left: 10px;
+            font-size: 0.8em;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="شعار بايثون" class="logo-img">
+            <span class="logo-text"> </span>
+        </div>
+        <button class="hamburger-menu" aria-label="قائمة التنقل" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#intro">المقدمة</a></li>
+            <li><a href="#concepts">المفاهيم الأساسية</a></li>
+            <li><a href="#projects">المشاريع</a></li>
+            <li><a href="#quiz-section">اختبر نفسك</a></li>
+        </ul>
+    </nav>
+
+<header class="hero-section" id="intro">
+    <div class="hero-content">
+        <img src="back.png" alt="صورة توضيحية لكورس بايثون" class="header-image">
+        <h1>⭐ Python Course For Kids</h1>
+        <p>انطلق نحو المستقبل! تعلم البرمجة القوية والممتعة للذكاء الاصطناعي وتحليل البيانات.</p>
+        <a href="#concepts" class="start-btn">Code Wonders Academy 🚀</a>
+    </div>
+</header>
+
+    <main class="container">
+        
+        <h2 id="concepts" class="section-title">🐍 مفاهيم بايثون الاساسية</h2>
+        <hr>
+
+        <section class="concept-card" id="c-1">
+            <h3>1) تعريف بايثون (Python Definition)</h3>
+            <p>بايثون لغة برمجة عالية المستوى، تفسيرية، تعتمد على البساطة والوضوح. يمكن استخدامها لإنشاء برامج، ألعاب، تطبيقات، وحتى مشاريع علمية.</p>
+            <div class="code-example">
+                <pre><code id="code1"><span class="function-name">print</span>(<span class="string">"Hello, Python!"</span>)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code1', this)">نسخ الكود</button>
+            </div>
+        </section>
+        
+        <section class="concept-card" id="c-2">
+            <h3>2) لماذا بايثون؟</h3>
+            <p><strong>سهولة القراءة والكتابة:</strong> مقارنة باللغات الأخرى.
+            <br><strong>مرنة ومتعددة المنصات:</strong> تعمل على أنظمة تشغيل متعددة (Windows, Mac, Linux).
+            <br><strong>مكتبات ضخمة:</strong> لدعم كل المجالات مثل AI, Data Science, Web.
+            <br><strong>مجتمع ضخم:</strong> يدعم التعلم والتطوير.</p>
+        </section>
+
+        <section class="concept-card" id="c-3">
+            <h3>3) القواعد الأساسية للكتابة (Syntax)</h3>
+            <p>بايثون تتطلب الالتزام بالمسافات (**Indentation**) لتنظيم الكود بدلاً من الأقواس.</p>
+            <div class="code-example">
+                <pre><code id="code3">name = <span class="string">"Rania"</span>
+age = <span class="number">10</span>
+<span class="keyword">if</span> age > <span class="number">5</span>:
+    <span class="function-name">print</span>(name)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code3', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-4">
+            <h3>4) التعليقات (Comments)</h3>
+            <p>التعليقات هي ملاحظات يكتبها المبرمج لتوضيح الكود ولا تؤثر على تنفيذه. نستخدم رمز **#**.</p>
+            <div class="code-example">
+                <pre><code id="code4"><span class="comment"># This is a single line comment</span>
+<span class="function-name">print</span>(<span class="string">"Hello"</span>)  <span class="comment"># Prints greeting</span></code></pre>
+                <button class="copy-btn" onclick="copyCode('code4', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-5">
+            <h3>5) أنواع البيانات (Data Types)</h3>
+            <p><code>int</code>: أعداد صحيحة | <code>float</code>: أعداد عشرية | <code>str</code>: نصوص | <code>bool</code>: True / False | <code>list</code>: قوائم | <code>tuple</code>: مجموعات غير قابلة للتعديل | <code>dict</code>: قاموس key-value</p>
+            <div class="code-example">
+                <pre><code id="code5">x = <span class="number">10</span>        <span class="comment"># int</span>
+y = <span class="number">3.5</span>       <span class="comment"># float</span>
+name = <span class="string">"Rinad"</span> <span class="comment"># str</span>
+is_happy = <span class="boolean">True</span> <span class="comment"># bool</span>
+colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>] <span class="comment"># list</span>
+person = {<span class="string">"name"</span>: <span class="string">"Rania"</span>, <span class="string">"age"</span>: <span class="number">36</span>} <span class="comment"># dict</span></code></pre>
+                <button class="copy-btn" onclick="copyCode('code5', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-6">
+            <h3>6) العمليات الحسابية (Arithmetic Operators)</h3>
+            <p>تُستخدم لإجراء العمليات الرياضية مثل الجمع (+), الطرح (-), الضرب (*), القسمة (/), باقي القسمة (%), الأس (**).</p>
+            <div class="code-example">
+                <pre><code id="code6-a">result_add = <span class="number">10</span> + <span class="number">5</span>
+result_pow = <span class="number">2</span> ** <span class="number">3</span>   <span class="comment"># 8</span>
+result_mod = <span class="number">10</span> % <span class="number">3</span>   <span class="comment"># 1</span>
+<span class="function-name">print</span>(result_add)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code6-a', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-7">
+            <h3>7) عمليات التعيين (Assignment Operators)</h3>
+            <p>تُستخدم لتعيين قيمة للمتغيرات، وأشهرها (=) و (+=) التي تزيد القيمة وتعينها في خطوة واحدة.</p>
+            <div class="code-example">
+                <pre><code id="code7-b">x = <span class="number">5</span>
+x += <span class="number">2</span>  <span class="comment"># تعادل x = x + 2. تصبح x الآن 7</span>
+<span class="function-name">print</span>(x)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code7-b', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-8">
+            <h3>8) عمليات المقارنة (Comparison Operators)</h3>
+            <p>تُستخدم لمقارنة قيمتين والنتيجة تكون دائماً (True) أو (False). مثل (==) و (!=) و (>) و (<).</p>
+            <div class="code-example">
+                <pre><code id="code8-c">a = <span class="number">10</span>
+b = <span class="number">5</span>
+is_equal = a == b <span class="comment"># False</span>
+is_greater = a > b <span class="comment"># True</span>
+<span class="function-name">print</span>(is_greater)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code8-c', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-9">
+            <h3>9) العمليات المنطقية (Logical Operators)</h3>
+            <p>تُستخدم لدمج الشروط المعقدة. وهي (and) و (or) و (not).</p>
+            <div class="code-example">
+                <pre><code id="code9-d">age = <span class="number">12</span>
+has_parent = <span class="boolean">True</span>
+<span class="comment"># True إذا كان العمر أكبر من 10 وَ لديه ولي أمر</span>
+<span class="keyword">if</span> age > <span class="number">10</span> <span class="keyword">and</span> has_parent: 
+    <span class="function-name">print</span>(<span class="string">"Allowed to join"</span>)
+<span class="keyword">else</span>:
+    <span class="function-name">print</span>(<span class="string">"Not allowed"</span>)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code9-d', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-10">
+            <h3>10) الوحدات البرمجية (Modules)</h3>
+            <p>هي ملفات بايثون تحتوي على دوال، متغيرات، وفئات يمكن إعادة استخدامها. نستخدم الأمر **`import`** لجلبها.</p>
+            <div class="code-example">
+                <pre><code id="code10-e"><span class="keyword">import</span> math
+<span class="function-name">print</span>(math.<span class="function-name">sqrt</span>(<span class="number">16</span>))  <span class="comment"># 4.0</span></code></pre>
+                <button class="copy-btn" onclick="copyCode('code10-e', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-11">
+            <h3>11) المتغيرات (Variables)</h3>
+            <p>تخزن البيانات لاستخدامها لاحقًا. يمكن تغيير قيمتها في أي وقت.</p>
+            <div class="code-example">
+                <pre><code id="code11-f">name = <span class="string">"Rinad"</span>
+age = <span class="number">10</span>
+<span class="function-name">print</span>(name)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code11-f', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-12">
+            <h3>12) الطباعة (Print)</h3>
+            <p>تستخدم لعرض المعلومات على الشاشة، يمكن دمج النصوص والمتغيرات بسهولة.</p>
+            <div class="code-example">
+                <pre><code id="code12-g">name = <span class="string">"Sami"</span>
+<span class="function-name">print</span>(<span class="string">"Hello"</span>, name)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code12-g', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-13">
+            <h3>13) المدخلات (Input)</h3>
+            <p>تتيح للمستخدم إدخال البيانات أثناء تشغيل البرنامج.</p>
+            <div class="code-example">
+                <pre><code id="code13-h">name = <span class="function-name">input</span>(<span class="string">"Enter your name: "</span>)
+<span class="function-name">print</span>(<span class="string">"Hello"</span>, name)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code13-h', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-14">
+            <h3>14) الجمل الشرطية (If, Elif, Else)</h3>
+            <p>تتيح اتخاذ قرارات مختلفة حسب تحقق الشروط.</p>
+            <div class="code-example">
+                <pre><code id="code14-i">score = <span class="number">80</span>
+<span class="keyword">if</span> score == <span class="number">100</span>:
+    <span class="function-name">print</span>(<span class="string">"Perfect!"</span>)
+<span class="keyword">elif</span> score >= <span class="number">50</span>:
+    <span class="function-name">print</span>(<span class="string">"Good job!"</span>)
+<span class="keyword">else</span>:
+    <span class="function-name">print</span>(<span class="string">"Keep practicing!"</span>)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code14-i', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-15">
+            <h3>15) الحلقات التكرارية (Loops)</h3>
+            <p>تستخدم لتكرار الكود. <strong>For Loop</strong> تكرر لعدد محدد. <strong>While Loop</strong> تكرر طالما الشرط صحيح.</p>
+            <div class="code-example">
+                <pre><code id="code15-j"><span class="comment"># For Loop</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function-name">range</span>(<span class="number">3</span>):
+    <span class="function-name">print</span>(<span class="string">"Hello"</span>) 
+
+<span class="comment"># While Loop</span>
+x = <span class="number">1</span>
+<span class="keyword">while</span> x <= <span class="number">3</span>:
+    <span class="function-name">print</span>(x)
+    x += <span class="number">1</span></code></pre>
+                <button class="copy-btn" onclick="copyCode('code15-j', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-16">
+            <h3>16) القوائم (Lists)</h3>
+            <p>تخزن مجموعة من العناصر يمكن الوصول إليها عن طريق الفهارس (indices). تبدأ الفهرسة من 0.</p>
+            <div class="code-example">
+                <pre><code id="code16-k">colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>]
+<span class="function-name">print</span>(colors[<span class="number">0</span>]) <span class="comment"># Output: red</span>
+colors.<span class="function-name">append</span>(<span class="string">"yellow"</span>)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code16-k', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="concept-card" id="c-17">
+            <h3>17) الدوال (Functions)</h3>
+            <p>الدوال عبارة عن كتل قابلة لإعادة الاستخدام من الكود. نستخدم <strong>`def`</strong> لتعريفها.</p>
+            <div class="code-example">
+                <pre><code id="code17-l"><span class="keyword">def</span> <span class="function-name">greet</span>(name):
+    <span class="function-name">print</span>(<span class="string">"Hello"</span>, name)
+
+<span class="function-name">greet</span>(<span class="string">"Rania"</span>)</code></pre>
+                <button class="copy-btn" onclick="copyCode('code17-l', this)">نسخ الكود</button>
+            </div>
+        </section>
+        
+        <h2 id="projects" class="section-title projects-title">🚀 5 مشاريع تطبيقية متقدمة</h2>
+        <hr>
+
+        <section class="project-card">
+            <h3>1. Advanced Calculator (آلة حاسبة متقدمة)</h3>
+            <p><strong>الوصف:</strong> برنامج يقوم بإجراء العمليات الحسابية والمنطقية المعقدة (مثل الدوال والجذور التربيعية) باستخدام وحدة <code>math</code>.</p>
+            <div class="code-example">
+                <pre><code id="proj1"><span class="keyword">import</span> math
+
+<span class="keyword">def</span> <span class="function-name">calculate</span>(num1, op, num2=<span class="boolean">None</span>):
+    <span class="keyword">if</span> op == <span class="string">'+'</span>:
+        <span class="keyword">return</span> num1 + num2
+    <span class="keyword">elif</span> op == <span class="string">'pow'</span>:
+        <span class="keyword">return</span> num1 ** num2
+    <span class="keyword">elif</span> op == <span class="string">'sqrt'</span>:
+        <span class="keyword">return</span> math.<span class="function-name">sqrt</span>(num1)
+
+<span class="function-name">print</span>(<span class="function-name">calculate</span>(<span class="number">9</span>, <span class="string">'sqrt'</span>)) <span class="comment"># 3.0</span>
+<span class="function-name">print</span>(<span class="function-name">calculate</span>(<span class="number">5</span>, <span class="string">'+'</span>, <span class="number">3</span>)) <span class="comment"># 8</span>
+</code></pre>
+                <button class="copy-btn" onclick="copyCode('proj1', this)">نسخ الكود</button>
+            </div>
+        </section>
+        
+        <section class="project-card">
+            <h3>2. Number Guessing Game (لعبة تخمين الرقم)</h3>
+            <p><strong>الوصف:</strong> يختار البرنامج رقمًا عشوائيًا، ويتيح للمستخدم محاولات متكررة لتخمينه مع إعطائه تلميحات.</p>
+            <div class="code-example">
+                <pre><code id="proj2"><span class="keyword">import</span> random
+secret_number = random.<span class="function-name">randint</span>(<span class="number">1</span>, <span class="number">20</span>)
+attempts = <span class="number">0</span>
+
+<span class="keyword">while</span> attempts < <span class="number">5</span>:
+    guess = <span class="function-name">int</span>(<span class="function-name">input</span>(<span class="string">"Guess a number between 1 and 20: "</span>))
+    attempts += <span class="number">1</span>
+    <span class="keyword">if</span> guess < secret_number:
+        <span class="function-name">print</span>(<span class="string">"Too low!"</span>)
+    <span class="keyword">elif</span> guess > secret_number:
+        <span class="function-name">print</span>(<span class="string">"Too high!"</span>)
+    <span class="keyword">else</span>:
+        <span class="function-name">print</span>(f<span class="string">"Excellent! You guessed it in {attempts} attempts."</span>)
+        <span class="keyword">break</span>
+<span class="keyword">else</span>:
+    <span class="function-name">print</span>(f<span class="string">"You ran out of attempts. The number was {secret_number}"</span>)
+</code></pre>
+                <button class="copy-btn" onclick="copyCode('proj2', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="project-card">
+            <h3>3. Student Grade Analyzer (محلل درجات الطلاب)</h3>
+            <p><strong>الوصف:</strong> برنامج يستخدم القوائم والحلقات لحساب متوسط درجات طالب وتحديد تقديره.</p>
+            <div class="code-example">
+                <pre><code id="proj3">grades = [<span class="number">85</span>, <span class="number">90</span>, <span class="number">78</span>, <span class="number">92</span>, <span class="number">88</span>]
+total = <span class="function-name">sum</span>(grades)
+average = total / <span class="function-name">len</span>(grades)
+
+<span class="keyword">if</span> average >= <span class="number">90</span>:
+    grade = <span class="string">"A"</span>
+<span class="keyword">elif</span> average >= <span class="number">80</span>:
+    grade = <span class="string">"B"</span>
+<span class="keyword">else</span>:
+    grade = <span class="string">"C"</span>
+
+<span class="function-name">print</span>(f<span class="string">"Average: {average}"</span>)
+<span class="function-name">print</span>(f<span class="string">"Grade: {grade}"</span>)
+</code></pre>
+                <button class="copy-btn" onclick="copyCode('proj3', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="project-card">
+            <h3>4. Fun Name Program (برنامج اسم مرح)</h3>
+            <p><strong>الوصف:</strong> برنامج بسيط يطلب اسم المستخدم ثم يعرض رسائل مرحة ومختلفة بناءً على طول الاسم باستخدام الشروط.</p>
+            <div class="code-example">
+                <pre><code id="proj4">name = <span class="function-name">input</span>(<span class="string">"Enter your fun name: "</span>)
+length = <span class="function-name">len</span>(name)
+
+<span class="keyword">if</span> length > <span class="number">8</span>:
+    <span class="function-name">print</span>(<span class="string">"Wow, a long and powerful name!"</span>)
+<span class="keyword">elif</span> length > <span class="number">4</span>:
+    <span class="function-name">print</span>(<span class="string">"A short and sweet name!"</span>)
+<span class="keyword">else</span>:
+    <span class="function-name">print</span>(<span class="string">"Your name is unique!"</span>)
+</code></pre>
+                <button class="copy-btn" onclick="copyCode('proj4', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+        <section class="project-card">
+            <h3>5. To-Do List Application (تطبيق قائمة المهام)</h3>
+            <p><strong>الوصف:</strong> برنامج تفاعلي يستخدم قائمة (List) وحلقة **`while`** لتمكين المستخدم من إضافة المهام باستمرار حتى يقرر الإغلاق.</p>
+            <div class="code-example">
+                <pre><code id="proj5">todo = []  <span class="comment"># empty list</span>
+
+<span class="keyword">while</span> <span class="boolean">True</span>:
+    task = <span class="function-name">input</span>(<span class="string">"Enter a task (or type 'exit' to stop): "</span>)
+
+    <span class="keyword">if</span> task.<span class="function-name">lower</span>() == <span class="string">"exit"</span>:
+        <span class="keyword">break</span>
+
+    todo.<span class="function-name">append</span>(task)
+    <span class="function-name">print</span>(<span class="string">"Task added!"</span>)
+
+<span class="function-name">print</span>(<span class="string">"\nYour To-Do List:"</span>)
+<span class="keyword">for</span> t <span class="keyword">in</span> todo:
+    <span class="function-name">print</span>(<span class="string">"-"</span>, t)
+</code></pre>
+                <button class="copy-btn" onclick="copyCode('proj5', this)">نسخ الكود</button>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="quiz-section" id="quiz-section">
+        <h2 class="section-title">📝 اختبر نفسك </h2>
+        <p>ابدأ الاختبار الآن واكتشف مدى إتقانك لمفاهيم البايثون !</p>
+        <button id="startQuizBtn" class="quiz-btn">ابدأ الاختبار الآن! 🎯</button>
+        
+        <div id="quizContainer" class="quiz-container" style="display: none;">
+            </div>
+
+        <div id="quizResult" class="quiz-result" style="display: none;">
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Code Wonders Academy | Designed by Ranya Abdelrahman</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
