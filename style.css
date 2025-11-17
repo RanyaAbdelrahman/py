@@ -34,7 +34,7 @@ body {
 }
 
 .logo-img {
-    width: 50px; 
+    width: 150px; 
     height: auto;
     margin-right: 15px; 
 }
@@ -398,4 +398,5 @@ footer p {
         padding: 15px 30px;
         font-size: 1.1em;
     }
+
 }
